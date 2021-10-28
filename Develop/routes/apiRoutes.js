@@ -6,9 +6,10 @@ router.get('/api/notes', (req, res) => {
 })
 
 router.post('/api/notes', (req, res) => {
-    req.body.id = notes.length.toString();
+    req.body.id = db.length.toString();
     db.push(req.body)
     res.json(db)
+    console.log('notes');
 })
 
 module.exports = router
